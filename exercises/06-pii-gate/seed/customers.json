@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Erika Mustermann",
+    "email": "erika.mustermann@kundenportal.invalid",
+    "phone": "+49 30 23125 123",
+    "iban": "DE89 3704 0044 0532 0130 00",
+    "door": { "width_mm": 2500, "height_mm": 2125, "surface": "smooth" }
+  },
+  {
+    "name": "Max Mustermann",
+    "email": "max@mustermann-bau.invalid",
+    "door": { "width_mm": 5000, "height_mm": 2250, "surface": "ribbed" }
+  }
+]

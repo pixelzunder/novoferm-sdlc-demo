@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Test Customer A",
+    "email": "customer-a@example.com",
+    "phone": "[REDACTED]",
+    "iban": "[REDACTED]",
+    "door": { "width_mm": 2500, "height_mm": 2125, "surface": "smooth" }
+  },
+  {
+    "name": "Test Customer B",
+    "email": "customer-b@example.com",
+    "door": { "width_mm": 5000, "height_mm": 2250, "surface": "ribbed" }
+  }
+]

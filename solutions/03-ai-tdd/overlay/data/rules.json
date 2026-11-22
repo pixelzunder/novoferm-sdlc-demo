@@ -1,0 +1,57 @@
+{
+  "_note": "Fictional rules and prices. Workshop material only - not Novoferm product data.",
+  "dimensions": {
+    "width_mm": {
+      "min": 2000,
+      "max": 5500
+    },
+    "height_mm": {
+      "min": 1875,
+      "max": 3000
+    }
+  },
+  "surfaces": {
+    "woodgrain": {
+      "price_cents_per_m2": 9800
+    },
+    "smooth": {
+      "price_cents_per_m2": 11200
+    },
+    "ribbed": {
+      "price_cents_per_m2": 10400
+    }
+  },
+  "drives": {
+    "manual": {
+      "price_cents": 0,
+      "max_width_mm": 3500
+    },
+    "standard": {
+      "price_cents": 34900,
+      "max_width_mm": 5000
+    },
+    "power": {
+      "price_cents": 52900,
+      "max_width_mm": 5500
+    }
+  },
+  "options": {
+    "windows": {
+      "price_cents": 21900,
+      "requires_drive": false
+    },
+    "smart_control": {
+      "price_cents": 12900,
+      "requires_drive": true
+    },
+    "wicket_door": {
+      "price_cents": 89000,
+      "requires_drive": false,
+      "min_width_mm": 2500,
+      "excludes": [
+        "windows"
+      ]
+    }
+  },
+  "vat_percent": 19
+}

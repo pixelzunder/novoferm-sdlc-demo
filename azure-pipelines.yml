@@ -1,0 +1,23 @@
+# Same gates as .github/workflows/verify.yml, for Azure DevOps.
+# Make this pipeline a required build validation in the branch policy of main -
+# a gate only holds where it cannot be skipped.
+trigger:
+  branches:
+    include: [main]
+pr:
+  branches:
+    include: [main]
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: "3.12"
+  - script: python -m pip install -e ".[dev]"
+    displayName: Install
+  - script: python scripts/scan_sensitive.py --all
+    displayName: Secrets and personal data
+  - script: python scripts/verify.py
+    displayName: Lint, types, tests, coverage

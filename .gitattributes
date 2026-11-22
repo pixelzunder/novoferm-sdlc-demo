@@ -1,0 +1,2 @@
+# LF everywhere: the hook is a shell script and must not get CRLF on Windows.
+* text=auto eol=lf

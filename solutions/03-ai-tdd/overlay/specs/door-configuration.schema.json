@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DoorConfiguration",
+  "description": "Input of the fictional door configurator. Allowed names come from data/rules.json.",
+  "type": "object",
+  "required": ["width_mm", "height_mm", "surface", "drive"],
+  "additionalProperties": false,
+  "properties": {
+    "width_mm": { "type": "integer", "minimum": 2000, "maximum": 5500 },
+    "height_mm": { "type": "integer", "minimum": 1875, "maximum": 3000 },
+    "surface": { "type": "string", "enum": ["woodgrain", "smooth", "ribbed"] },
+    "drive": { "type": "string", "enum": ["manual", "standard", "power"] },
+    "options": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "enum": ["windows", "smart_control", "wicket_door"] }
+    }
+  }
+}

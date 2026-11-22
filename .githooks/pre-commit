@@ -1,0 +1,12 @@
+#!/bin/sh
+# Versioned hook. Activate once per clone:  git config core.hooksPath .githooks
+# It runs the same gates as CI. A local hook can be skipped with --no-verify,
+# which is why CI runs them again on the server.
+
+if [ -x .venv/bin/python ]; then PY=.venv/bin/python
+elif [ -x .venv/Scripts/python.exe ]; then PY=.venv/Scripts/python.exe
+else PY=python
+fi
+
+"$PY" scripts/scan_sensitive.py || exit 1
+"$PY" scripts/verify.py || exit 1
